@@ -2,17 +2,16 @@ name: GitlabSync
 
 on:
   - push
-  - delete
 
 jobs:
   sync:
     runs-on: ubuntu-latest
-    name: 3SDVA
+    name: 3SDVA/hellotest
     steps:
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0
-    - uses: 3SDVA/hellotest@v2.282.0
+    - uses: hellotest@v2.282.0
       with:
         # Such as https://github.com/wangchucheng/g
         target-url: http://www.192.168.99.66.com/hariomdso/helloworld.git
