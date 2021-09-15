@@ -7,12 +7,12 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-18.04
-    name: helloworld
+    name: hellotest
     steps:
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0
-    - uses: 3SDVA/hellotest@v2.282.0
+    - uses: 3SDVA/hellotest@v3
       with:
         # Such as https://github.com/wangchucheng/g
         target-url: http://www.192.168.99.66.com/hariomdso/helloworld.git
