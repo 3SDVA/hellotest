@@ -6,13 +6,13 @@ on:
 
 jobs:
   sync:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     name: helloworld
     steps:
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0
-    - uses: Hariom kumar singh/helloworld@v0.1.0
+    - uses: Hariomkumarsingh/helloworld@v2.282.0
       with:
         # Such as https://github.com/wangchucheng/g
         target-url: http://www.192.168.99.66.com/hariomdso/helloworld.git
