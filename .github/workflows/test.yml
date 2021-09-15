@@ -1,0 +1,22 @@
+name: GitlabSync
+
+on:
+  - push
+  - delete
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    name: helloworld
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - uses: Hariom kumar singh/helloworld@v0.1.0
+      with:
+        # Such as https://github.com/wangchucheng/g
+        target-url: http://www.192.168.99.66.com/hariomdso/helloworld.git
+        # Such as wangchucheng
+        target-username: hariomdso
+          # You can store token in your project's 'Setting > Secrets' and reference the name here. Such as ${{ secrets.ACCESS\_TOKEN }}
+        target-token: WMyhixshDzUVVASR53Pk
