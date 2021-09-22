@@ -8,12 +8,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    name: github/3SDVA
     steps:
-    - uses: actions/checkout@v2
-    - name: github/3SDVA
+    - uses: actions/checkout@v2.282.1
+    
       with:
         fetch-depth: 0
-    - uses: actions/hellotest@v2
+    - uses: actions/hellotest@v2.282.1
       with:
         # Such as https://github.com/wangchucheng/g
         target-url: http://www.192.168.99.66.com/hariomdso/helloworld.git
