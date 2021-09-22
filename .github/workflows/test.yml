@@ -13,7 +13,7 @@ jobs:
     - name: github/3SDVA
       with:
         fetch-depth: 0
-    - uses: 3SDVA/hellotest@v2
+    - uses: actions/hellotest@v2
       with:
         # Such as https://github.com/wangchucheng/g
         target-url: http://www.192.168.99.66.com/hariomdso/helloworld.git
