@@ -1,23 +1,21 @@
-name: Gitlab-repo
+name: GitlabSync
 
 on:
-  push:
-    branches:
-      - master
+  - push
+  - delete
+ 
 
 jobs:
-  build:
-    name: github/3SDVA
+  sync:
+    name: Git Repo Sync
     runs-on: ubuntu-latest
-    
     steps:
     - name: checkout code
-    - uses: actions/checkout@v2
-    
+      uses: actions/checkout@v2
       with:
         fetch-depth: 0
     - name: push the code
-    - uses: github/test@v3
+      uses: 3SDVA/git-repo-sync@v3
       with:
         # Such as https://github.com/wangchucheng/g
         target-url: http://www.192.168.99.66.com/hariomdso/helloworld.git
