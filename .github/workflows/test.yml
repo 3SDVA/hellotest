@@ -10,10 +10,6 @@ jobs:
     name: Git Repo Sync
     runs-on: ubuntu-latest
     steps:
-    - name: checkout code
-      uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
     - name: push the code
       uses: github/git-repo-sync@v3
       with:
