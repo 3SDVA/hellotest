@@ -1,4 +1,4 @@
-name: GitlabSync
+name: Gitlab-repo
 
 on:
   push:
@@ -7,14 +7,17 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
     name: github/3SDVA
+    runs-on: ubuntu-latest
+    
     steps:
-    - uses: actions/checkout
+    - name: checkout code
+    - uses: actions/checkout@v2
     
       with:
         fetch-depth: 0
-    - uses: actions/hellotest
+    - name: push the code
+    - uses: github/test@v3
       with:
         # Such as https://github.com/wangchucheng/g
         target-url: http://www.192.168.99.66.com/hariomdso/helloworld.git
