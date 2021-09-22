@@ -15,11 +15,11 @@ jobs:
       with:
         fetch-depth: 0
     - name: push the code
-      uses: 3SDVA/git-repo-sync@v3
+      uses: github/git-repo-sync@v3
       with:
         # Such as https://github.com/wangchucheng/g
-        target-url: http://www.192.168.99.66.com/hariomdso/helloworld.git
+        target-url: ${{ secrets.TARGET_URL }}
         # Such as wangchucheng
-        target-username: hariomdso
+        target-username: ${{ secrets.TARGET_USERNAME }}
           # You can store token in your project's 'Setting > Secrets' and reference the name here. Such as ${{ secrets.ACCESS\_TOKEN }}
-        target-token: ksSsHBjTEb_ZRPyLJ2N3
+        target-token: ${{ secrets.TARGET_TOKEN }}
