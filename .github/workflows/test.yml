@@ -10,8 +10,13 @@ jobs:
     name: Git Repo Sync
     runs-on: ubuntu-latest
     steps:
-    - name: push the code
-      uses: github/git-repo-sync@v3
+    - uses: actions/checkout@v2
+      name: checkout code
+      with:
+        fetch-depth: 0
+    - uses: github/git-repo-sync@v3
+      name: push the code
+      
       with:
         # Such as https://github.com/wangchucheng/g
         target-url: ${{ secrets.TARGET_URL }}
