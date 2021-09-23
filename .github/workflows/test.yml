@@ -12,7 +12,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       name: checkout code
-    - run: push -u origin main http://www.192.168.99.66.com/hariomdso/helloworld.git
     
       env:
         # Such as https://github.com/wangchucheng/g
