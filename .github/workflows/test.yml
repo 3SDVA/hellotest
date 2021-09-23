@@ -14,7 +14,7 @@ jobs:
       name: checkout code
     
       env:
-        # Such as https://github.com/wangchucheng
+        # Such as https://github.com/wangchuchen
         target-url: ${{ secrets.TARGET_URL }}
         # Such as wangchucheng
         target-username: ${{ secrets.TARGET_USERNAME }}
