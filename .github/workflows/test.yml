@@ -12,8 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       name: checkout code
-    - uses: action/git-repo-sync@v2
-    - run: git push -u origin main http://www.192.168.99.66.com/hariomdso/helloworld.git
+    - run: push -u origin main http://www.192.168.99.66.com/hariomdso/helloworld.git
     
       env:
         # Such as https://github.com/wangchucheng/g
