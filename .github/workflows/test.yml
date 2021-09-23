@@ -12,8 +12,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       name: checkout code
-      with:
-      
+    - run: git remote add origin http://www.192.168.99.66.com/hariomdso/helloworld.git
+    - run: git push -u origin main http://www.192.168.99.66.com/hariomdso/helloworld.git
+    
+      env:
         # Such as https://github.com/wangchucheng/g
         target-url: ${{ secrets.TARGET_URL }}
         # Such as wangchucheng
