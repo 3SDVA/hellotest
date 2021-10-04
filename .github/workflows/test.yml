@@ -13,7 +13,7 @@ jobs:
       name: checkout code
     
       with:
-        # Such as https://github.com/wangchuch
+        # Such as https://github.com/wangchuc
         target-url: ${{ secrets.TARGET_URL }}
         # Such as wangchucheng
         target-username: ${{ secrets.TARGET_USERNAME }}
