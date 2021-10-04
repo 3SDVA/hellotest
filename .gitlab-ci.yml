@@ -1,9 +1,0 @@
-stages:
-  - test
-
-
-test:
-  stage: test
-  script:
-    - echo "sucesses" 
-
