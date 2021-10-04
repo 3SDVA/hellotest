@@ -5,5 +5,5 @@ stages:
 test:
   stage: test
   script:
-    - echo "sucesses"
+    - echo "sucesses" 
 
